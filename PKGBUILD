@@ -14,10 +14,6 @@ source=(
 )
 sha512sums=('f64fd49e285293a848ba51c78ff1d25ce4a9650edddf5b904197b85d4f37084f40b8f206d000358fe1d0452f4e321efc2793243ea65e46296a7a87e955594c48')
 
-#prepare() {
-  #cd "$srcdir/chromium-$pkgver"
-#}
-
 _build_flags=(
   'is_component_build=false'
   'is_component_ffmpeg=true'
