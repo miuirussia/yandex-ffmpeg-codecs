@@ -12,7 +12,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Build archlinux package
-        uses: mijailr/arch-makepkg-action@v1
+        uses: mijailr/arch-makepkg-action@1.0.1
       - name: See whats done
         run: |
           ls -l .

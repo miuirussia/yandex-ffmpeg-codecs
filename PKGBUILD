@@ -1,7 +1,7 @@
-pkgname=opera-ffmpeg-codecs
+pkgname=yandex-ffmpeg-codecs
 pkgver=114.0.5735.199
 pkgrel=1
-pkgdesc="additional support for proprietary codecs for opera"
+pkgdesc="additional support for proprietary codecs for yandex"
 arch=('x86_64')
 url="https://ffmpeg.org/"
 license=('LGPL2.1')
