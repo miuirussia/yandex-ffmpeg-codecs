@@ -19,18 +19,11 @@ jobs:
           docker build -t arch-builder .
           docker run --rm -v "${PWD}:/opt/build" arch-builder
       - name: Release
-        uses: actions/create-release@v1
-        id: create_release
+        uses: marvinpinto/action-automatic-releases@latest
         with:
-          draft: false
+          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          automatic_release_tag: "v${{ steps.version.outputs.version }}"
+          title: v${{ steps.version.outputs.version }}
           prerelease: false
-          release_name: ${{ steps.version.outputs.version }}
-        env:
-          GITHUB_TOKEN: ${{ github.token }}
-      - name: Upload release
-        uses: actions/upload-release-asset@v1
-        env:
-          GITHUB_TOKEN: ${{ github.token }}
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: '*.zst'
+          files: |
+            *.zst
